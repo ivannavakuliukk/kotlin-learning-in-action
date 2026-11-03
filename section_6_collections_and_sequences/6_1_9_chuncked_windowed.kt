@@ -24,7 +24,9 @@ import kotlin.math.abs
 */
 
 fun main(){
-    // Розділити movies на групи по 3. Для кожної групи вивести назви фільмів і середній рейтинг.
+    // Всі завдання з класом Movie
+
+    // 1. Розділити movies на групи по 3. Для кожної групи вивести назви фільмів і середній рейтинг.
     println("Task 1")
     val chunkedMovies = movies.chunked(3)
     chunkedMovies.forEach{
@@ -32,7 +34,7 @@ fun main(){
         println(it.joinToString { it.title } + "- average rating: ${"%.2f".format(averageRating)} ")
     }
 
-    // Розділити movies на пари по 2. Для кожної пари вивести фільм із вищим рейтингом.
+    // 2. Розділити movies на пари по 2. Для кожної пари вивести фільм із вищим рейтингом.
     // Останній фільм теж обробити, якщо він залишиться без пари.
     println("\nTask 2")
     val chunkedMovies2 = movies.chunked(2)
@@ -41,7 +43,7 @@ fun main(){
         println(higherRatingMovie.title + " " + higherRatingMovie.rating)
     }
 
-    // Створити вікна по 3 фільми. Для кожного вікна порахувати середній рейтинг
+    // 3. Створити вікна по 3 фільми. Для кожного вікна порахувати середній рейтинг
     // і знайти трійку з найвищим середнім рейтингом.
     println("\nTask 3")
     val windowedMovies = movies.windowed(3)
@@ -54,7 +56,7 @@ fun main(){
     }
     println("The higher rated window - ${windowedMoviesWithAverageRating.maxBy { it.key }.value.map { it.title }}")
 
-    // Створити вікна по 2 фільми. Вивести пари, де різниця рейтингів становить
+    // 4. Створити вікна по 2 фільми. Вивести пари, де різниця рейтингів становить
     // 0.2 або більше, та показати цю різницю.
     println("\nTask 4")
     val windowedMovies2 = movies.windowed(2)

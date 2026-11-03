@@ -14,7 +14,9 @@ import kotlin_in_action.employees
 val bonuses = listOf(500, 300, 800, 400, 600, 1000)
 
 fun main(){
-    // Об'єднай працівників зі списком бонусів відповідно
+    // Всі завдання з класом Employee
+
+    // 1. Об'єднай працівників зі списком бонусів відповідно
     println("Task 1")
     // можна використовувати infix синтаксис
     val employeeWithBonuses = employees zip bonuses
@@ -22,7 +24,7 @@ fun main(){
         println("${employee.name} - salary: ${employee.salary}, bonus: $bonus")
     }
 
-    // Створи новий список Employee, в якому зарплатня вже містить бонус
+    // 2.Створи новий список Employee, в якому зарплатня вже містить бонус
     println("\nTask 2")
     val employeeWithBonuses2 = employees.zip(bonuses) { employee, bonus ->
         Employee(employee.name, employee.age, employee.salary + bonus, employee.department)
@@ -31,7 +33,7 @@ fun main(){
         println("${employee.name} - salary: ${employee.salary}")
     }
 
-    // Використовуючи employees і bonuses створити список рядків,
+    // 3.Використовуючи employees і bonuses створити список рядків,
     // де для кожного працівника буде показано name, salary + bonuses = new salary
     println("\nTask 3")
     val employeeWithBonuses3 = employees.zip(bonuses) { employee, bonus ->

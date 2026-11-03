@@ -32,7 +32,7 @@ val favouriteMovies = mutableListOf(
 )
 
 fun main(){
-    // Збільш рейтинг кожного фільму на 0.2.
+    // 1. Збільш рейтинг кожного фільму на 0.2.
     // Якщо рейтинг після зміни перевищує 10.0, встанови його рівно 10.0. Виведи оновлений список
     println("Task 1")
     favouriteMovies.replaceAll{
@@ -42,14 +42,14 @@ fun main(){
     }
     println(favouriteMovies)
 
-    // Заміни фільми з індексів 2 до 4 включно на один і той самий фільм Movie("Coming Soon", "Unknown", 2026, 0.0)
+    // 2. Заміни фільми з індексів 2 до 4 включно на один і той самий фільм Movie("Coming Soon", "Unknown", 2026, 0.0)
     println("Task 2")
     favouriteMovies
         .subList(2, 5)
         .fill(Movie("Coming Soon", "Unknown", 2026, 0.0))
     println(favouriteMovies)
 
-    // Замініть всі фільми в списку на один фільм Movie("Unknown", "Unknown", 0, 0.0).
+    // 3. Замініть всі фільми в списку на один фільм Movie("Unknown", "Unknown", 0, 0.0).
     println("Task 3")
     favouriteMovies
         .fill(Movie("Unknown", "Unknown", 0, 0.0))

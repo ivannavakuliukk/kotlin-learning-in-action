@@ -7,6 +7,7 @@ package kotlin_in_action.section_7_nullable_values
     Якщо приведення неможливе, повертає null замість помилки.
 */
 
+// Завдання 1
 // Перевизначити equals функцію, використовуючи as?
 class Book(
     val title: String,
@@ -24,6 +25,7 @@ class Book(
     }
 }
 
+// Завдання 2
 // Перевизначити equals функцію, використовуючи is
 class Cat(
     val name: String,

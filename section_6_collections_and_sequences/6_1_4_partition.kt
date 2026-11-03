@@ -17,12 +17,14 @@ import kotlin_in_action.employees
  */
 
 fun main() {
-    // Розділи працівників на дві групи: тих, у кого зарплата 50000
+    // Всі завдання з класом Employee
+
+    // 1. Розділи працівників на дві групи: тих, у кого зарплата 50000
     // і більше, та тих, у кого зарплата менша за 50000. Виведи обидві групи.
     val (lowSalary, highSalary) = employees.partition { it.salary < 50000 }
     println("Low salary: $lowSalary, \nHigh salary: $highSalary")
 
-    // Розділи працівників на дві групи: працівників з відділу IT, які старші 25 років,
+    // 2. Розділи працівників на дві групи: працівників з відділу IT, які старші 25 років,
     // та всіх інших. Порахуй кількість працівників у кожній групі.
     val(oldItEmployees, others) = employees.partition { it.department == "IT" && it.age > 25}
     val oldItEmployeesCount = oldItEmployees.size
@@ -32,7 +34,7 @@ fun main() {
                 "others: $othersCount - $others"
     )
 
-    // Розділи працівників на дві групи: тих, хто має зарплату більше 50000 або працює в IT
+    // 3. Розділи працівників на дві групи: тих, хто має зарплату більше 50000 або працює в IT
     // та всіх інших. Виведи імена працівників з обох груп.
     val predicate = {employee: Employee -> employee.department == "IT" || employee.salary > 50000}
     val (comeIn, stayOut) = employees.partition(predicate)

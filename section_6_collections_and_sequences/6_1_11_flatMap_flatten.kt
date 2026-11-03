@@ -32,18 +32,18 @@ val requests = listOf(
 
 fun main(){
     val nested = requests.map { it.products }
-    // Отримати єдиний плаский список з всіх продуктів
+    // 1.Отримати єдиний плаский список з всіх продуктів
     println("Task 1")
     val productList = nested.flatten()
     println(productList.joinToString())
 
-    // Отримай той самий плаский список продуктів,
+    // 2.Отримай той самий плаский список продуктів,
     // але одним викликом напряму на requests (без проміжного map)
     println("\nTask 2")
     val productList2 = requests.flatMap{it.products}
     println(productList2.joinToString())
 
-    // Побудуй Map<String, Int>, де ключ — назва продукту,
+    // 3.Побудуй Map<String, Int>, де ключ — назва продукту,
     // а значення — скільки разів він зустрічається серед усіх замовлень.
     println("\nTask 3")
     val productWithCount = requests.flatMap{it.products}

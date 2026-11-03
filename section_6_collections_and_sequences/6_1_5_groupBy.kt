@@ -12,7 +12,9 @@ import kotlin_in_action.movies
  */
 
 fun main(){
-    // Згрупуй фільми за жанром. Для кожного жанру виведи кількість фільмів та середній рейтинг.
+    // Всі завдання з класом Movie
+
+    // 1. Згрупуй фільми за жанром. Для кожного жанру виведи кількість фільмів та середній рейтинг.
     println("Task 1")
     val moviesByGenre = movies.groupBy{it.genre}
     moviesByGenre.forEach { (genre, movies) ->
@@ -21,7 +23,7 @@ fun main(){
 
     }
 
-    // Згрупуй фільми за жанром, а всередині кожної групи залиш тільки фільми з рейтингом 8.5 і вище.
+    // 2. Згрупуй фільми за жанром, а всередині кожної групи залиш тільки фільми з рейтингом 8.5 і вище.
     // Виведи назви таких фільмів для кожного жанру.
     println("\nTask 2")
     val moviesByGenreHighRating = moviesByGenre.mapValues { movies -> movies.value.filter{ it.rating >= 8.5} }
@@ -29,7 +31,7 @@ fun main(){
         println("$genre: ${movies.joinToString { it.title }}")
     }
 
-    // Для кожного жанру знайди фільм з найвищим рейтингом та виведи його назву і рейтинг.
+    // 3. Для кожного жанру знайди фільм з найвищим рейтингом та виведи його назву і рейтинг.
     println("\nTask 3")
     val higherRatingMovies = moviesByGenre.mapValues { entry ->
         entry.value.maxByOrNull { it.rating }

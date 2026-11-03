@@ -16,17 +16,19 @@ import kotlin_in_action.movies
  */
 
 fun main() {
-    // Створи Map, де назва фільму є ключем, а його рейтинг — значенням.
+    // Всі завдання з класом Movie
+
+    // 1. Створи Map, де назва фільму є ключем, а його рейтинг — значенням.
     println("Task 1")
     val nameToRating = movies.associate{ it.title to it.rating }
     println(nameToRating)
 
-    // Створи Map, де рік виходу фільму є ключем, а сам об'єкт Movie — значенням.
+    // 2. Створи Map, де рік виходу фільму є ключем, а сам об'єкт Movie — значенням.
     println("Task 2")
     val moviesByYear = movies.associateBy{ it.year }
     println(moviesByYear)
 
-    // Створи Map, де об'єкт Movie є ключем, а значенням буде true або false залежно від того,
+    // 3. Створи Map, де об'єкт Movie є ключем, а значенням буде true або false залежно від того,
     // чи має фільм рейтинг 8.5 або вище.
     println("Task 3")
     val moviesWithIsHighRating = movies.associateWith{ it.rating >= 8.5 }
