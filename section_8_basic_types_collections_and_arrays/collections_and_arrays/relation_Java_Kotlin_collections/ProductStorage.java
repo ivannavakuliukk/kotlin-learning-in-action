@@ -1,4 +1,4 @@
-package kotlin_in_action.section_8_basic_types_collections_and_arrays.part_8_2.relation_Java_Kotlin_collections;
+package kotlin_in_action.section_8_basic_types_collections_and_arrays.collections_and_arrays.relation_Java_Kotlin_collections;
 
 import java.util.List;
 

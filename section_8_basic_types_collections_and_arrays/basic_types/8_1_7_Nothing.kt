@@ -1,4 +1,4 @@
-package kotlin_in_action.section_8_basic_types_collections_and_arrays.part_8_1
+package kotlin_in_action.section_8_basic_types_collections_and_arrays.basic_types
 
 import kotlin_in_action.Product
 import kotlin_in_action.User

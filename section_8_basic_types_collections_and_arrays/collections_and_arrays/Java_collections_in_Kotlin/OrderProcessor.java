@@ -1,4 +1,4 @@
-package kotlin_in_action.section_8_basic_types_collections_and_arrays.part_8_2.Java_collections_in_Kotlin;
+package kotlin_in_action.section_8_basic_types_collections_and_arrays.collections_and_arrays.Java_collections_in_Kotlin;
 
 import kotlin_in_action.Product;
 

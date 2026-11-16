@@ -1,4 +1,4 @@
-package kotlin_in_action.section_8_basic_types_collections_and_arrays.part_8_1
+package kotlin_in_action.section_8_basic_types_collections_and_arrays.basic_types
 
 // 8.1.6 - The unit type - Kotlin`s void
 
