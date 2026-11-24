@@ -9,16 +9,21 @@ import kotlin_in_action.section_9_operators_and_conventions.ShoppingCart
 // 9.3.2 - Checking whether the object belongs to collection: The in convention
 
 /*
-    
+    Оператор in дозволяє перевіряти належність елемента до колекції, діапазону або власного об'єкта.
+    - a in b перетворюється на b.contains(a).
+    - a !in b перетворюється на !b.contains(a).
+    - Для перевантаження оператора використовується operator fun contains(), яка повинна повертати Boolean.
 */
 
-// Завдання 1:
+// Завдання 1: Перевантажити contains() для Rectangle,
+// перевіряючи належність точки через напіввідкриті діапазони.
 operator fun Rectangle.contains(point: Point): Boolean{
     return point.x in upperLeft.x ..< lowerRight.x &&
             point.y in upperLeft.y ..< lowerRight.y
 }
 
-// Завдання 2:
+// Завдання 2: Перевантажити contains() для ShoppingCart,
+// перевіряючи наявність товару за назвою.
 operator fun ShoppingCart.contains(itemName: String): Boolean{
     return getItems().any{itemName == it.name}
 }

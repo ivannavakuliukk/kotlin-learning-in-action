@@ -14,6 +14,8 @@ import kotlin_in_action.section_9_operators_and_conventions.Point
     - OpenEndRange<T> — інтерфейс напіввідкритого діапазону з властивостями start та endExclusive.
     - Обидва інтерфейси мають стандартну реалізацію contains() та isEmpty() і вимагають, щоб тип T реалізовував Comparable<T>.
     - IntRange — готовий клас діапазону цілих чисел, який також підтримує ітерацію.
+    - якщо клас реалізує Comparable<T>, перевантажувати rangeTo() та rangeUntil() необов'язково, оскільки стандартна
+     бібліотека Kotlin вже надає відповідні extension-функції.
 */
 
 // Завдання 1: Перевантажити rangeTo() і rangeUntil() для Money,
